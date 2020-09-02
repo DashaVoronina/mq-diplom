@@ -34,7 +34,7 @@ ul {
 }
 
 .container-popup {
-    display: flex;
+    display: none;
     position: fixed;
 
     width: 100%;
@@ -63,12 +63,19 @@ ul {
 }
 .popup_cross {
     display: block;
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     margin-left: 372px;
     fill: #ffffff;
     position: relative;
     z-index: 3;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url("../svg/form-x.svg");
+    background-size: 19px auto;
+    background-position: center;
     
 }
 .popup {
@@ -147,7 +154,7 @@ ul {
     padding-left: 305px;
     margin-top: 15px;
 }
-input {
+label .popup_radio {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
     width: 1px;
@@ -488,7 +495,7 @@ h2 {
 }
 
 
-h3 > .article__title:hover {
+h3:hover {
     color: b59f5b;
 }
 
@@ -974,28 +981,50 @@ li > .category {
 }
 
 @media (max-width: 640px) {
-    .popup {
-        width: 92%;
-    }
+
     .welcome {
         height: 635px;
         background-image: url("../images/banner-mobile.jpg");
     }
-    .container-logo {
+    .container {
         width: 85%;
+        align-items: flex-start;
+        padding: 0;
+    }
+    .container-logo {
+        width: 100%;
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
         padding-top: 215px;
         padding-bottom: 90px;
+        padding-left: 20px;
     }
     .menu {
-        display: none;
+        width: 25px;
+        height: 25px;
+
     }
     .menu__button {
         display: block;
+        width: 1.4em;
+        height: 1em;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        font-size: 25px;
+        position: relative;
+        text-indent: -9999px;
+        cursor: pointer;
+        margin: 5px 0;
     }
-    .menu__button:before, .menu__button:after {
+    .menu__button:before {
+        top: 0;
+    }
+    .menu__button:after {
+        bottom: 0;
+    }
+    .menu__button:after, .menu__button:before {
         content: "";
         width: 100%;
         height: 20%;
@@ -1004,11 +1033,21 @@ li > .category {
         position: absolute;
         left: 0;
     }
-
-    .container {
+    .menu__button-label {
         width: 100%;
-        padding: 0 4%;
+        height: 20%;
+        margin-top: -0.1em;
+        border-radius: 5px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        top: 50%;
     }
+    .menu-list {
+        display: none;
+    }
+
+
 
     .container-title {
         width: 78%;
@@ -1144,7 +1183,7 @@ li > .category {
         margin-left: auto;
     }
 }
-@media (max-width: 640px) and (orientation: landscape) {
+@media (max-width: 641px) and (orientation: landscape) {
     .trands__list {
         display: flex;
         flex-wrap: wrap;
@@ -1156,12 +1195,11 @@ li > .category {
     }
 }
 @media (min-width: 641px) and (max-width: 1199px) {
-    .popup {
-        width: 92%;
-    }
+    
     .container {
         width: 90%;
         padding: 0 5%;
+        align-items: center;
     }
     .container-title {
         width: 78%;
@@ -1172,11 +1210,15 @@ li > .category {
         background-image: url("../images/banner-bg-tablet.jpg");
     }
     .menu {
-         display: none;
-    }
-    .menu__button {
         width: 25px;
-        height: 20px;
+        height: 25px;
+
+    }
+
+    .menu__button {
+        display: block;
+        width: 1.4em;
+        height: 1em;
         border: none;
         padding: 0;
         background-color: transparent;
@@ -1184,8 +1226,15 @@ li > .category {
         position: relative;
         text-indent: -9999px;
         cursor: pointer;
+        margin: 5px 0;
     }
-    .menu__button-label:before {
+    .menu__button:before {
+        top: 0;
+    }
+    .menu__button:after {
+        bottom: 0;
+    }
+    .menu__button:after, .menu__button:before {
         content: "";
         width: 100%;
         height: 20%;
@@ -1195,22 +1244,17 @@ li > .category {
         left: 0;
     }
     .menu__button-label {
-        content: "";
         width: 100%;
         height: 20%;
+        margin-top: -0.1em;
         border-radius: 5px;
         background-color: #ffffff;
         position: absolute;
         left: 0;
+        top: 50%;
     }
-    .menu__button-label:after {
-        content: "";
-        width: 100%;
-        height: 20%;
-        border-radius: 5px;
-        background-color: #ffffff;
-        position: absolute;
-        left: 0;
+    .menu-list {
+        display: none;
     }
     .trands__list {
         display: flex;
