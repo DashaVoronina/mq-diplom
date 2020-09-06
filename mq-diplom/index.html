@@ -27,7 +27,7 @@
         <div class="popup_area">
             <label class="popup_text-small">
             <span class="popup_text_small">Как часто вы заходите на сайт?</span>
-            <div class="popup_select_tick"></div>
+
         <select class="popup_select">
             <option class="popup_selected" selected>Почти каждый день</option>
             <option>Раз в несколько дней</option>
@@ -48,7 +48,7 @@
                 <input type="radio" class="popup_radio">
                     <span class="select_radio">Нет</span></label>
             </div>
-        </label>
+
         <label class="popup_content">
                 <span class="popup_text_small">Расскажите, какой контент вы бы хотели видеть на нашм сайте?</span>
                 <textarea class="popup_textarea" placeholder="Может, больше рецептов?"></textarea>
@@ -524,10 +524,10 @@
     <ul class="shop-list">
         <li class="shop-item">
             <div class="user-shop"><picture class="user_img_adaptive">
-                <source media="(min-width: 641px) and (max-width:1199px)"
-                        srcset="images/shop-item-tablet1.jpg">
                 <source media="(max-width: 640px)"
                         srcset="images/shop-item-mobile1.jpg">
+                <source media="(min-width:641px)"
+                        srcset="images/shop-item-tablet1.jpg">
                 <img class="user_img_shop" src="images/shop-item-desk1.jpg" alt="spot">
                         </picture></div>
             <div class="shop-item-info">
@@ -549,10 +549,10 @@
         <li class="shop-item">
             <div class="user-shop">
                 <picture class="user_img_adaptive">
+                    <source media="(max-width:640px)"
+                            srcset="images/shop-item-mobilet2.jpg">
                     <source media="(min-width: 641px)"
                             srcset="images/shop-item-tablet2.jpg">
-                    <source media="(max-width: 640px)"
-                            srcset="images/shop-item-mobile2.jpg">
                     <img class="user_img_shop" src="images/shop-item-desk2.jpg" alt="rabbit">
 
                 </picture></div>
@@ -573,10 +573,10 @@
         </li>
         <li class="shop-item">
             <div class="user-shop"><picture class="user_img_adaptive">
+                <source media="(max-width: 640px)"
+                        srcset="images/shop-item-mobilet3.jpg">
                 <source media="(min-width: 641px)"
                         srcset="images/shop-item-tablet3.jpg">
-                <source media="(max-width: 640px)"
-                        srcset="images/shop-item-mobile3.jpg">
                 <img class="user_img_shop" src="images/shop-item-desk3.jpg" alt="spot">
 
             </picture></div>
