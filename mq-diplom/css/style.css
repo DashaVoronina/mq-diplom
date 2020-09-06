@@ -427,9 +427,7 @@ h1 {
 
     
 }
-.trand {
 
-}
 .trand__title__link {
     display: inline-block;
     font-family: open-sans, serif;
@@ -490,6 +488,7 @@ li > .article__subtitle_link {
     text-transform: uppercase;
     font-size: 14px;
     color: #b59f5b;
+    text-decoration: none;
 }
 li:hover > .article__subtitle_link {
     text-decoration: underline;
@@ -501,6 +500,8 @@ h2 {
     text-align: left;
     font-family: open-sans, serif;
     font-weight: bold;
+    text-decoration: none;
+
 }
 
 
@@ -524,13 +525,14 @@ time {
 
     font-size: 12px;
 }
-a {
-.author-article_link;
+
+.author-article__link {
     text-decoration: none;
     color: #000000;
     font-family: open-sans, serif;
     font-weight: bold;
 }
+
 .article__text {
     margin-top: 52px;
 }
@@ -552,6 +554,12 @@ h3 {
     font-size: 17px;
     font-weight: bold;
     margin: 0;
+
+
+}
+h3 > a {
+    text-decoration: none;
+    color: #000000;
 }
 .recent-posts:after {
     content: "";
